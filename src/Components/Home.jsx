@@ -1,0 +1,82 @@
+import React from "react";
+import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa6";
+import profilePic from "./profile.png";
+
+const HeroSection = () => {
+  return (
+    <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+      {/* Left Side Content */}
+      <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2">
+  Hello!<br />
+  <span className="text-blue-400">I'm Muhammad Umair</span>{" "}
+  <span className="text-purple-400">Arshad</span>
+</h1>
+
+        {/* Profile Image on Small Screens */}
+        <div className="lg:hidden p-10">
+          <img
+            src={profilePic}
+            alt="Muhammad Umair Arshad"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-gray-600 shadow-lg object-cover"
+          />
+        </div>
+
+        <p className="max-w-xl text-gray-300 text-lg leading-relaxed mt-4">
+          Frontend Developer specializing in creating responsive, high-performance web applications. Passionate about crafting seamless user experiences with modern technologies and optimizing UI for efficiency and accessibility.
+        </p>
+
+        {/* Social Icons */}
+        <div className="flex gap-6 mt-8">
+          <a
+            href="https://wa.me/923347775040"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+            aria-label="Contact me on WhatsApp"
+          >
+            <FaWhatsapp size={25} />
+          </a>
+          <a
+            href="https://github.com/UmairArshad08"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+            aria-label="View my GitHub profile"
+          >
+            <FaGithub size={25} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/muhammad-umair-arshad-ab7b34312/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+            aria-label="Connect with me on LinkedIn"
+          >
+            <FaLinkedinIn size={25} />
+          </a>
+          <a
+            href="mailto:umairarshad6697@gmail.com"
+            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+            aria-label="Send me an email"
+          >
+            <MdEmail size={25} />
+          </a>
+        </div>
+      </div>
+
+      {/* Right Side Profile Image (Only for Large Screens) */}
+      <div className="hidden lg:flex lg:w-1/2 justify-center p-20">
+        <img
+          src={profilePic}
+          alt="Muhammad Umair Arshad"
+          className="w-70 h-60 rounded-full border-2 border-gray-600 shadow-lg object-cover"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
