@@ -128,7 +128,7 @@ const ContactForm = () => {
 
             {step === 3 && (
               <>
-                <h2 className="text-2xl font-bold mb-6">What's this about?                </h2>
+                <h2 className="text-2xl font-bold mb-6">Enter Your Phone</h2>
                 <input
                   type="tel"
                   placeholder="Subject of Discussion"

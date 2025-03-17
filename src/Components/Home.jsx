@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
     
-      <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20">
+      <div className=" sm:w-[100%] sm:p-4 lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2">
           Hello!<br />
           <span className="text-blue-400">
@@ -30,7 +30,7 @@ const HeroSection = () => {
           <img
             src={profilePic}
             alt="Muhammad Umair Arshad"
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-gray-600 shadow-lg object-cover"
+            className="w-42 h-42 md:w-40 md:h-40 rounded-full border-4 border-gray-600 shadow-lg object-cover"
           />
         </div>
 
@@ -77,7 +77,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Side Profile Image (Only for Large Screens) */}
-      <div className="hidden lg:flex lg:w-1/2 justify-center item-center p-20">
+      <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"
