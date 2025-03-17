@@ -4,6 +4,7 @@ import { RiTailwindCssFill, RiClaudeLine } from 'react-icons/ri';
 import { SiTypescript } from 'react-icons/si';
 import { TbBrandRedux } from 'react-icons/tb';
 
+
 const Skills = () => {
   const skillsData = [
     { name: 'React', icon: <FaReact />, color: '#61DAFB' },
@@ -17,6 +18,7 @@ const Skills = () => {
     { name: 'Figma', icon: <FaFigma />, color: 'white' },
     { name: 'JavaScript', icon: <FaJs />, color: 'yellow' },
     { name: 'Claude AI', icon: <RiClaudeLine />, color: 'orange' },
+
   ];
 
   return (

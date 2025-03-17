@@ -37,7 +37,6 @@ export default function Nav() {
     <>
       <nav className={`w-full p-4 fixed top-0 bg-opacity-10 backdrop-blur-lg shadow-lg z-50 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center flex-wrap pt-2 pb-2">
-          {/* Status Bar */}
           <div className="w-full md:w-auto flex justify-between items-center mb-2 md:mb-0">
             <div className="flex items-center gap-4">
               <Wifi size={22} />
@@ -54,8 +53,7 @@ export default function Nav() {
             </button>
           </div>
 
-          {/* Navigation Bar */}
-          <div className={`w-full md:w-auto flex flex-col md:flex-row items-center justify-center gap-12 mt-2 md:mt-0 transition-all duration-300 ${menuOpen ? "flex" : "hidden md:flex"}`}>
+           <div className={`w-full md:w-auto flex flex-col md:flex-row items-center justify-center gap-12 mt-2 md:mt-0 transition-all duration-300 ${menuOpen ? "flex" : "hidden md:flex"}`}>
             <a href="#home" className="hover:text-purple-400">Home</a>
             <a href="#experience" className="hover:text-purple-400">My Journey</a>
             <a href="#experience" className="hover:text-purple-400">Experience</a>

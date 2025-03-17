@@ -3,16 +3,13 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
-  // Replace this with the actual URL if hosted online
-  const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
+   const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
 
   return (
     <footer className="text-gray-400 py-6 flex flex-col items-center justify-center">
-      {/* Copyright */}
-      <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
+       <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
 
-      {/* Social Icons */}
-      <div className="flex gap-6 mt-6 text-white">
+       <div className="flex gap-6 mt-6 text-white">
         <a
           href="https://wa.me/923347775040"
           target="_blank"
@@ -49,8 +46,7 @@ const Footer = () => {
         </a>
       </div>
 
-      {/* View Resume Button */}
-      <a
+       <a
         href={resumeUrl}
         target="_blank"
         rel="noopener noreferrer"

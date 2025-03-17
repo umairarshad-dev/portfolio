@@ -17,9 +17,7 @@ const ContactForm = () => {
 
   const handleSubmit = () => {
     console.log({ name, email, phone, message });
-    // Here you would typically send the data to a server
     alert('Form submitted successfully!');
-    // Reset form
     setName('');
     setEmail('');
     setPhone('');
@@ -46,7 +44,6 @@ const ContactForm = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 w-full">
-          {/* Contact Information */}
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
             <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
             
@@ -84,7 +81,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-gray-400">Location</p>
-                  <p>Islamabad, Pakistna</p>
+                  <p>Islamabad, Pakistan</p>
                 </div>
               </div>
               
@@ -96,13 +93,12 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-gray-400">Calendly</p>
-                  <a href="#" className="text-blue-400 hover:underline">Schedule a meeting with Umair</a>
+                  <a href="#" className="text-blue-400 hover:underline">Schedule a meeting with Me</a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Form Section */}
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
             {step === 1 && (
               <>
@@ -190,7 +186,6 @@ const ContactForm = () => {
               )}
             </div>
             
-            {/* Progress dots */}
             <div className="flex justify-center mt-8 gap-2">
               {[1, 2, 3, 4].map((num) => (
                 <div 

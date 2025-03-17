@@ -1,4 +1,5 @@
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -7,15 +8,24 @@ import profilePic from "./profile.png";
 const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
-      {/* Left Side Content */}
+    
       <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20">
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2">
-  Hello!<br />
-  <span className="text-blue-400">I'm Muhammad Umair</span>{" "}
-  <span className="text-purple-400">Arshad</span>
-</h1>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2">
+          Hello!<br />
+          <span className="text-blue-400">
+            I'm{" "}
+            <Typewriter
+              words={["Muhammad Umair Arshad"]}
+              loop={false}
+              cursor
+              cursorStyle="_"
+              typeSpeed={150}
+              deleteSpeed={80}
+            />
+          </span>{" "}
+          {/* <span className="text-purple-400">Arshad</span> */}
+        </h1>
 
-        {/* Profile Image on Small Screens */}
         <div className="lg:hidden p-10">
           <img
             src={profilePic}
@@ -28,7 +38,6 @@ const HeroSection = () => {
           Frontend Developer specializing in creating responsive, high-performance web applications. Passionate about crafting seamless user experiences with modern technologies and optimizing UI for efficiency and accessibility.
         </p>
 
-        {/* Social Icons */}
         <div className="flex gap-6 mt-8">
           <a
             href="https://wa.me/923347775040"
@@ -68,7 +77,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Side Profile Image (Only for Large Screens) */}
-      <div className="hidden lg:flex lg:w-1/2 justify-center p-20">
+      <div className="hidden lg:flex lg:w-1/2 justify-center item-center p-20">
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"

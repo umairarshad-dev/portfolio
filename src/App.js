@@ -5,6 +5,7 @@ import Home from "./Components/Home.jsx";
 import CreativeWork from "./Components/CreativeWork.jsx"; 
 import MyJourney  from "./Components/MyJourney.jsx"; 
 import Skills  from "./Components/Skills.jsx"; 
+import Projects  from "./Components/Projects.jsx"; 
 import Contact  from "./Components/Contact.jsx"; 
 import Footer  from "./Components/Footer.jsx"; 
 
@@ -21,6 +22,7 @@ function App() {
       <CreativeWork/> 
       <MyJourney /> 
       <Skills/> 
+      <Projects/> 
       <Contact/> 
       <Footer/> 
 
