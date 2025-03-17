@@ -4,11 +4,13 @@ import { FaWhatsapp, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 import profilePic from "./profile.png";
+import { MdOutlinePhone } from "react-icons/md";
+
 
 const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
-    
+
       <div className=" sm:w-[100%] sm:p-4 lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20 pt-4">
         <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2 mt-20">
           Hello!<br />
@@ -49,13 +51,11 @@ const HeroSection = () => {
             <FaWhatsapp size={25} />
           </a>
           <a
-            href="https://github.com/UmairArshad08"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:03347775040"
             className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
-            aria-label="View my GitHub profile"
+            aria-label="Call me"
           >
-            <FaGithub size={25} />
+            <MdOutlinePhone size={25} />
           </a>
           <a
             href="https://www.linkedin.com/in/muhammad-umair-arshad-ab7b34312/"
@@ -73,17 +73,11 @@ const HeroSection = () => {
           >
             <MdEmail size={25} />
           </a>
-          <a
-            href="tel:03347775040"
-            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
-            aria-label="Call me"
-          >
-            <FaPhone size={25} />
-          </a>
+
         </div>
       </div>
 
-       <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
+      <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"
