@@ -1,15 +1,45 @@
+import { useState, useEffect } from "react";
 import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { FaArrowUp } from "react-icons/fa";
 
 const Footer = () => {
-   const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
+  const [showArrow, setShowArrow] = useState(false);
+  const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector("footer");
+      if (footer) {
+        const footerTop = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Show the arrow when the footer is in view
+        if (footerTop < windowHeight) {
+          setShowArrow(true);
+        } else {
+          setShowArrow(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <footer className="text-gray-400 py-6 flex flex-col items-center justify-center pb-4">
-       <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
+    <footer className="text-gray-400 py-6 flex flex-col items-center justify-center pb-4 relative">
+      <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
 
-       <div className="flex gap-6 mt-6 text-white">
+      <div className="flex gap-6 mt-6 text-white">
         <a
           href="https://wa.me/923347775040"
           target="_blank"
@@ -46,7 +76,7 @@ const Footer = () => {
         </a>
       </div>
 
-       <a
+      <a
         href={resumeUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -54,6 +84,16 @@ const Footer = () => {
       >
         View Resume
       </a>
+
+      {showArrow && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8  rounded-full bg-white/10 text-white hover:bg-gray-500 transition duration-300"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp size={22} />
+        </button>
+      )}
     </footer>
   );
 };

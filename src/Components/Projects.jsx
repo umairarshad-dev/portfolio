@@ -9,20 +9,20 @@ const projects = [
     link: "https://comerzio.fly.dev/",
     image: comerzio,
   },
-  {
-    title: "Comerzio",
-    description: "A classified platform to buy and sell unused items effortlessly.",
-    tech: ["Remix", "Tailwind", "TypeScript"],
-    link: "https://comerzio.fly.dev/",
-    image: comerzio,
-  },
-  {
-    title: "Comerzio",
-    description: "A classified platform to buy and sell unused items effortlessly.",
-    tech: ["Remix", "Tailwind", "TypeScript"],
-    link: "https://comerzio.fly.dev/",
-    image: comerzio,
-  }
+  // {
+  //   title: "Comerzio",
+  //   description: "A classified platform to buy and sell unused items effortlessly.",
+  //   tech: ["Remix", "Tailwind", "TypeScript"],
+  //   link: "https://comerzio.fly.dev/",
+  //   image: comerzio,
+  // },
+  // {
+  //   title: "Comerzio",
+  //   description: "A classified platform to buy and sell unused items effortlessly.",
+  //   tech: ["Remix", "Tailwind", "TypeScript"],
+  //   link: "https://comerzio.fly.dev/",
+  //   image: comerzio,
+  // }
 ];
 
 const FeaturedProjects = () => {
