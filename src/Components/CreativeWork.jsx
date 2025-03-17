@@ -1,7 +1,41 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FaCode, FaPalette, FaMagic, FaLaptop } from "react-icons/fa";
 
 const CreativeWork = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // When section enters viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Once triggered, we don't need to observe anymore
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        // Trigger when at least 20% of the element is visible
+        threshold: 0.2,
+        // Add some rootMargin to trigger slightly before the element is in view
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+    
+    // Start observing the section
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    // Clean up
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const services = [
     {
       title: "Interactive UI",
@@ -9,6 +43,8 @@ const CreativeWork = () => {
       icon: <FaCode size={22} />,
       color: "bg-blue-500",
       borderColor: "border-blue-500",
+      animation: "transition-all duration-700 transform translate-x-0 opacity-100",
+      initial: "-translate-x-full opacity-0", // From left
     },
     {
       title: "Creative Design",
@@ -16,6 +52,8 @@ const CreativeWork = () => {
       icon: <FaPalette size={22} />,
       color: "bg-purple-500",
       borderColor: "border-purple-500",
+      animation: "transition-all duration-700 transform translate-x-0 opacity-100",
+      initial: "translate-x-full opacity-0", // From right
     },
     {
       title: "Animations",
@@ -23,6 +61,8 @@ const CreativeWork = () => {
       icon: <FaMagic size={22} />,
       color: "bg-green-500",
       borderColor: "border-green-500",
+      animation: "transition-all duration-700 transform translate-y-0 opacity-100",
+      initial: "-translate-y-full opacity-0", // From top
     },
     {
       title: "Responsive",
@@ -30,11 +70,16 @@ const CreativeWork = () => {
       icon: <FaLaptop size={22} />,
       color: "bg-yellow-500",
       borderColor: "border-yellow-500",
+      animation: "transition-all duration-700 transform translate-y-0 opacity-100",
+      initial: "translate-y-full opacity-0", // From bottom
     },
   ];
 
   return (
-    <section className="relative bg-[#0f172a] text-white py-16 px-4 sm:px-6 text-center min-h-screen overflow-hidden border-b-4 border-[#2d3748]">
+    <section 
+      ref={sectionRef}
+      className="relative bg-[#0f172a] text-white py-16 px-4 sm:px-6 text-center min-h-screen overflow-hidden border-b-4 border-[#2d3748]"
+    >
        <div className="absolute inset-0 overflow-hidden">
         {Array.from({ length: 50 }).map((_, i) => (
           <div
@@ -87,7 +132,13 @@ const CreativeWork = () => {
 
          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mt-12 sm:mt-16 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="flex items-start gap-4 text-left mb-4">
+            <div 
+              key={index} 
+              className={`flex items-start gap-4 text-left mb-4 ${isVisible ? service.animation : service.initial}`}
+              style={{ 
+                transitionDelay: `${index * 200}ms`,
+              }}
+            >
               <div className={`${service.color} p-3 rounded-lg text-white flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 animate-dance`}>
                 {service.icon}
               </div>
