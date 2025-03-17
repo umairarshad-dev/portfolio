@@ -128,10 +128,10 @@ const ContactForm = () => {
 
             {step === 3 && (
               <>
-                <h2 className="text-2xl font-bold mb-6">Enter Your Phone</h2>
+                <h2 className="text-2xl font-bold mb-6">What's your Your Phone No</h2>
                 <input
                   type="tel"
-                  placeholder="Subject of Discussion"
+                  placeholder="Enter your phone number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
