@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGithub, FaFigma, FaJs } from 'react-icons/fa';
 import { RiTailwindCssFill, RiClaudeLine } from 'react-icons/ri';
 import { SiTypescript } from 'react-icons/si';
@@ -6,6 +6,8 @@ import { TbBrandRedux } from 'react-icons/tb';
 
 const Skills = () => {
   const [visibleItems, setVisibleItems] = useState([]);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const containerRef = useRef(null);
   
   const skillsData = [
     { name: 'React', icon: <FaReact />, color: '#61DAFB' },
@@ -21,40 +23,71 @@ const Skills = () => {
     { name: 'Claude AI', icon: <RiClaudeLine />, color: 'orange' },
   ];
 
-  // Animate items into view on component mount
+  const animateItems = () => {
+    if (hasAnimated) return;
+    
+    setHasAnimated(true);
+    skillsData.forEach((_, index) => {
+      setTimeout(() => {
+        setVisibleItems(prev => [...prev, index]);
+      }, index * 150); // Stagger animation timing
+    });
+  };
+
+  // Set up scroll animation with Intersection Observer
   useEffect(() => {
-    const animateItems = () => {
-      skillsData.forEach((_, index) => {
-        setTimeout(() => {
-          setVisibleItems(prev => [...prev, index]);
-        }, index * 150); // Stagger animation timing
-      });
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3
     };
-    
-    // Small delay before starting animations
-    setTimeout(animateItems, 300);
-    
-    // Observer for scroll-based animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          animateItems();
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    const container = document.querySelector('.skills-container');
-    if (container) observer.observe(container);
-    
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateItems();
+      }
+    }, options);
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
     return () => {
-      if (container) observer.disconnect();
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
     };
   }, []);
 
+  // Add scroll parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      
+      const elements = containerRef.current.querySelectorAll('.skill-item');
+      const containerTop = containerRef.current.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (containerTop < windowHeight && containerTop > -containerRef.current.offsetHeight) {
+        const scrollProgress = (windowHeight - containerTop) / (windowHeight + containerRef.current.offsetHeight);
+        
+        elements.forEach((el, index) => {
+          // Create a slight parallax effect based on index and scroll position
+          const offsetY = (index % 3 - 1) * scrollProgress * 15;
+          const offsetX = ((index % 5) - 2) * scrollProgress * 8;
+          const rotate = ((index % 4) - 2) * scrollProgress * 5;
+          
+          el.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg)`;
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="skills-container my-16 px-4 max-w-6xl mx-auto">
+    <div ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12 text-white animate-fade-in">
         Skill Highlights
       </h2>
@@ -63,12 +96,12 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center justify-center p-4 transition-all duration-500 
+            className={`skill-item flex flex-col items-center justify-center p-4 transition-all duration-700 
                       hover:scale-110 hover:rotate-3 hover:shadow-lg hover:shadow-${skill.name.toLowerCase()}/20
-                      ${visibleItems.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      ${visibleItems.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
           >
             <div
-              className="text-4xl sm:text-5xl mb-2 transition-all duration-300 hover:rotate-12"
+              className="text-4xl sm:text-5xl mb-2 transition-all duration-500 hover:rotate-12"
               style={{ color: skill.color }}
             >
               {skill.icon}
