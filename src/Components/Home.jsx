@@ -1,6 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 import profilePic from "./profile.png";
@@ -72,6 +72,13 @@ const HeroSection = () => {
             aria-label="Send me an email"
           >
             <MdEmail size={25} />
+          </a>
+          <a
+            href="tel:03347775040"
+            className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+            aria-label="Call me"
+          >
+            <FaPhone size={25} />
           </a>
         </div>
       </div>
