@@ -6,7 +6,7 @@ const Footer = () => {
    const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
 
   return (
-    <footer className="text-gray-400 py-6 flex flex-col items-center justify-center">
+    <footer className="text-gray-400 py-6 flex flex-col items-center justify-center pb-4">
        <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
 
        <div className="flex gap-6 mt-6 text-white">

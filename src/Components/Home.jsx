@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
     
-      <div className=" sm:w-[100%] sm:p-4 lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2">
+      <div className=" sm:w-[100%] sm:p-4 lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20 pt-4">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2 mt-20">
           Hello!<br />
           <span className="text-blue-400">
             I'm{" "}
@@ -34,7 +34,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <p className="max-w-xl text-gray-300 text-lg leading-relaxed mt-4">
+        <p className="max-w-xl text-gray-300 text-lg leading-relaxed ">
           Frontend Developer specializing in creating responsive, high-performance web applications. Passionate about crafting seamless user experiences with modern technologies and optimizing UI for efficiency and accessibility.
         </p>
 
@@ -76,8 +76,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Right Side Profile Image (Only for Large Screens) */}
-      <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
+       <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"
