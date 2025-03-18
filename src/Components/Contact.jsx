@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [step, setStep] = useState(1);
@@ -109,7 +110,17 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white p-4 flex flex-col items-center pb-8">
-      <Toaster position="top-center" reverseOrder={false} />
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="w-full max-w-6xl mt-8">
         <h1 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-4">
           Let's Connect
