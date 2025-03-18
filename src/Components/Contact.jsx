@@ -217,7 +217,7 @@ const ContactForm = () => {
                 <h2 className="text-2xl font-bold mb-6">What's your Phone No</h2>
                 <input
                   type="tel"
-                  placeholder="Enter your phone number (11 digits)"
+                  placeholder="Enter your phone number"
                   value={phone}
                   onChange={handlePhoneChange}
                   maxLength={11}
