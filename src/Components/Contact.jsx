@@ -6,16 +6,61 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [phone, setPhone] = useState('');
+  const [error, setError] = useState('');
+
+  const validateName = (value) => {
+    return /^[A-Za-z\s]+$/.test(value);
+  };
+
+  const validateEmail = (value) => {
+    return /^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(value);
+  };
+
+  const validatePhone = (value) => {
+    return /^\d{11}$/.test(value);
+  };
+
+  const validateMessage = (value) => {
+    return value.trim().length >= 60;
+  };
 
   const handleNext = () => {
+    setError('');
+    
+    // Validate current step before proceeding
+    if (step === 1) {
+      if (!validateName(name)) {
+        setError('Name must contain only letters (no digits or special characters)');
+        return;
+      }
+    } else if (step === 2) {
+      if (!validateEmail(email)) {
+        setError('Email must follow the format example@gmail.com');
+        return;
+      }
+    } else if (step === 3) {
+      if (!validatePhone(phone)) {
+        setError('Phone number must be exactly 11 digits');
+        return;
+      }
+    }
+    
     if (step < 4) setStep(step + 1);
   };
 
   const handleBack = () => {
+    setError('');
     if (step > 1) setStep(step - 1);
   };
 
   const handleSubmit = () => {
+    setError('');
+    
+    if (!validateMessage(message)) {
+      setError('Message must be at least 60 characters');
+      return;
+    }
+    
     console.log({ name, email, phone, message });
     alert('Form submitted successfully!');
     setName('');
@@ -31,6 +76,34 @@ const ContactForm = () => {
     if (step === 3 && phone.trim() === '') return true;
     if (step === 4 && message.trim() === '') return true;
     return false;
+  };
+
+  // Handle input changes with validation
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    setName(value);
+    setError('');
+  };
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    setError('');
+  };
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    // Only allow digits
+    if (value === '' || /^\d+$/.test(value)) {
+      setPhone(value);
+      setError('');
+    }
+  };
+
+  const handleMessageChange = (e) => {
+    const value = e.target.value;
+    setMessage(value);
+    setError('');
   };
 
   return (
@@ -100,6 +173,12 @@ const ContactForm = () => {
           </div>
 
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
+            {error && (
+              <div className="mb-4 p-3 bg-red-900/50 text-red-200 rounded-xl text-sm">
+                {error}
+              </div>
+            )}
+
             {step === 1 && (
               <>
                 <h2 className="text-2xl font-bold mb-6">What's your name?</h2>
@@ -107,7 +186,7 @@ const ContactForm = () => {
                   type="text"
                   placeholder="Enter your name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={handleNameChange}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                 />
               </>
@@ -118,9 +197,9 @@ const ContactForm = () => {
                 <h2 className="text-2xl font-bold mb-6">What's your email?</h2>
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Enter your email (example@gmail.com)"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleEmailChange}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                 />
               </>
@@ -128,12 +207,13 @@ const ContactForm = () => {
 
             {step === 3 && (
               <>
-                <h2 className="text-2xl font-bold mb-6">What's your Your Phone No</h2>
+                <h2 className="text-2xl font-bold mb-6">What's your Phone No</h2>
                 <input
                   type="tel"
-                  placeholder="Enter your phone number"
+                  placeholder="Enter your phone number (11 digits)"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={handlePhoneChange}
+                  maxLength={11}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                 />
               </>
@@ -143,12 +223,15 @@ const ContactForm = () => {
               <>
                 <h2 className="text-2xl font-bold mb-6">Your message</h2>
                 <textarea
-                  placeholder="Type your message here...."
+                  placeholder="Type your message here (minimum 60 characters)..."
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={handleMessageChange}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                   rows="4"
                 />
+                <p className="mt-2 text-sm text-gray-500">
+                  Characters: {message.length}/60 {message.length < 60 ? "(minimum 60 required)" : ""}
+                </p>
               </>
             )}
 
