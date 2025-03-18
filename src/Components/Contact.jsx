@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactForm = () => {
   const [step, setStep] = useState(1);
@@ -30,17 +31,17 @@ const ContactForm = () => {
     // Validate current step before proceeding
     if (step === 1) {
       if (!validateName(name)) {
-        setError('Name must contain only letters (no digits or special characters)');
+        toast.error('Name must contain only letters (no digits or special characters)');
         return;
       }
     } else if (step === 2) {
       if (!validateEmail(email)) {
-        setError('Email must follow the format example@gmail.com');
+        toast.error('Email must follow the format example@gmail.com');
         return;
       }
     } else if (step === 3) {
       if (!validatePhone(phone)) {
-        setError('Phone number must be exactly 11 digits');
+        toast.error('Phone number must be exactly 11 digits');
         return;
       }
     }
@@ -57,12 +58,12 @@ const ContactForm = () => {
     setError('');
     
     if (!validateMessage(message)) {
-      setError('Message must be at least 60 characters');
+      toast.error('Message must be at least 60 characters');
       return;
     }
     
     console.log({ name, email, phone, message });
-    alert('Form submitted successfully!');
+    toast.success('Form submitted successfully!');
     setName('');
     setEmail('');
     setPhone('');
@@ -107,7 +108,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b]  stext-white p-4 flex flex-col items-center pb-8">
+    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white p-4 flex flex-col items-center pb-8">
+      <Toaster position="top-center" reverseOrder={false} />
       <div className="w-full max-w-6xl mt-8">
         <h1 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-4">
           Let's Connect
@@ -173,12 +175,6 @@ const ContactForm = () => {
           </div>
 
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
-            {error && (
-              <div className="mb-4 p-3 bg-red-900/50 text-red-200 rounded-xl text-sm">
-                {error}
-              </div>
-            )}
-
             {step === 1 && (
               <>
                 <h2 className="text-2xl font-bold mb-6">What's your name?</h2>

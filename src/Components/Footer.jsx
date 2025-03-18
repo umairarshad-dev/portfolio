@@ -89,7 +89,7 @@ const Footer = () => {
         <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8  rounded-full bg-white/10 text-white hover:bg-gray-500 transition duration-300"
-          aria-label="Scroll to top"
+          aria-label="Scroll to up"
         >
           <FaArrowUp size={22} />
         </button>
