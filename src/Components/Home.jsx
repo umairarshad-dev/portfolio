@@ -37,8 +37,7 @@ const HeroSection = () => {
         </div>
 
         <p className="max-w-xl text-gray-300 text-lg leading-relaxed ">
-          Frontend Developer specializing in creating responsive, high-performance web applications. Passionate about crafting seamless user experiences with modern technologies and optimizing UI for efficiency and accessibility.
-        </p>
+        I am a dedicated Frontend Developer with 1.5 years of experience specializing in React, Remix, and TypeScript. Passionate about crafting scalable, high-performance web applications with a strong emphasis on user experience, accessibility, and responsiveness. I thrive on solving complex challenges and building innovative digital solutions. Open to new opportunities and collaborations in frontend development.        </p>
 
         <div className="flex gap-6 mt-8">
           <a
