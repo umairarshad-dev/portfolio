@@ -16,7 +16,7 @@ const HeroSection = () => {
   Hello!
   <div className="py-2"></div>
   <span className="text-blue-400 whitespace-nowrap">
-    I'm{" "}
+    I'm {""}
     <Typewriter
       words={["M Umair Arshad"]}
       loop={false}
