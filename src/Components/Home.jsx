@@ -18,7 +18,7 @@ const HeroSection = () => {
   <span className="text-blue-400 whitespace-nowrap">
     I'm{" "}
     <Typewriter
-      words={["Umair Arshad"]}
+      words={["M Umair Arshad"]}
       loop={false}
       cursor
       cursorStyle="_"
