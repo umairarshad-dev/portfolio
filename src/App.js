@@ -26,12 +26,6 @@ function App() {
       <Contact/> 
       <Footer/> 
 
-
-
-
-
-
-      {/* <div className="pt-20 text-center">Hello, Welcome to My Portfolio!</div> */}
     </div>
   );
 }
