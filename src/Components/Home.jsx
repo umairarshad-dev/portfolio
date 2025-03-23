@@ -57,7 +57,7 @@ const HeroSection = () => {
             <MdOutlinePhone size={25} />
           </a>
           <a
-            href="https://www.linkedin.com/in/muhammad-umair-arshad-ab7b34312/"
+            href="https://www.linkedin.com/in/umairarshad-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
