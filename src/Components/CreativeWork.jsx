@@ -108,7 +108,7 @@ const CreativeWork = () => {
         }
         
         .animate-dance {
-          animation: dance 5s ease-in-out infinite;
+          animation: dance 4s ease-in-out infinite;
         }
       `}</style>
 
