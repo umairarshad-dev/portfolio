@@ -9,24 +9,24 @@ import { MdOutlinePhone } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+    <section className="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
 
-      <div className=" sm:w-[100%] sm:p-4 lg:w-1/2 flex flex-col justify-center items-center lg:items-start p-20 pt-4">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-2 mt-20">
-          Hello!<br />
-          <span className="text-blue-400">
-            I'm{" "}
-            <Typewriter
-              words={["Muhammad Umair Arshad"]}
-              loop={false}
-              cursor
-              cursorStyle="_"
-              typeSpeed={150}
-              deleteSpeed={80}
-            />
-          </span>{" "}
-          {/* <span className="text-purple-400">Arshad</span> */}
-        </h1>
+      <div className="w-full sm:w-full lg:w-1/2 flex flex-col justify-center items-center">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
+  Hello!
+  <div className="py-2"></div>
+  <span className="text-blue-400 whitespace-nowrap">
+    I'm{" "}
+    <Typewriter
+      words={["Umair Arshad"]}
+      loop={false}
+      cursor
+      cursorStyle="_"
+      typeSpeed={150}
+      deleteSpeed={80}
+    />
+  </span>{" "}
+</h1>
 
         <div className="lg:hidden p-10">
           <img
@@ -36,8 +36,8 @@ const HeroSection = () => {
           />
         </div>
 
-        <p className="max-w-xl text-gray-300 text-lg leading-relaxed ">
-        I am a dedicated Frontend Developer with 1.5 years of experience specializing in React, Remix, and TypeScript. Passionate about crafting scalable, high-performance web applications with a strong emphasis on user experience, accessibility, and responsiveness. I thrive on solving complex challenges and building innovative digital solutions.</p>
+        <p className="max-w-xl text-gray-300 text-lg leading-relaxed text-center">
+          I am a dedicated Frontend Developer specializing in React, Remix, and TypeScript. Passionate about crafting scalable, high-performance web applications with a strong emphasis on user experience, accessibility, and responsiveness. I thrive on solving complex challenges and building innovative digital solutions.</p>
 
         <div className="flex gap-6 mt-8">
           <a
@@ -76,7 +76,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden  sm:w-[100%] lg:flex lg:w-1/2 justify-center item-center p-20">
+      <div className="hidden lg:flex lg:w-1/2 justify-center items-center pt-20">
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"
