@@ -85,13 +85,14 @@ const Footer = () => {
       </a>
 
       {showArrow && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8  rounded-full bg-white/10 text-white hover:bg-gray-500 transition duration-300"
-          aria-label="Scroll to up"
-        >
-          <FaArrowUp size={22} />
-        </button>
+      <button
+      onClick={scrollToTop}
+      className="fixed bottom-6 right-8 bg-gray-600 hover:bg-gray-700 p-3 rounded-full text-white shadow-sm transition duration-300"
+      aria-label="Scroll to up"
+    >
+      <FaArrowUp size={20} />
+    </button>
+    
       )}
     </footer>
   );

@@ -23,7 +23,7 @@ const ContactForm = () => {
   };
 
   const validateMessage = (value) => {
-    return value.trim().length >= 60;
+    return value.trim().length >= 0;
   };
 
   const handleNext = () => {
@@ -41,7 +41,7 @@ const ContactForm = () => {
       }
     } else if (step === 3) {
       if (!validatePhone(phone)) {
-        toast.error('Phone number must be exactly 11 digits');
+        toast.error('Enter a valid phone number to proceed.');
         return;
       }
     }
@@ -213,10 +213,10 @@ const ContactForm = () => {
 
             {step === 3 && (
               <>
-                <h2 className="text-2xl font-bold mb-6">What's your Phone No</h2>
+                <h2 className="text-2xl font-bold mb-6">Enter your phone number</h2>
                 <input
-                  type="tel"
-                  placeholder="Enter your phone number"
+                  type="text"
+                  placeholder="Enter Phone Number"
                   value={phone}
                   onChange={handlePhoneChange}
                   maxLength={11}
@@ -229,14 +229,14 @@ const ContactForm = () => {
               <>
                 <h2 className="text-2xl font-bold mb-6">Your message</h2>
                 <textarea
-                  placeholder="Type your message here (minimum 60 characters)..."
+                  placeholder="Type your message here ( maximum 100 characters)..."
                   value={message}
                   onChange={handleMessageChange}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                   rows="4"
                 />
                 <p className="mt-2 text-sm text-gray-500">
-                  Characters: {message.length}/60 {message.length < 60 ? "(minimum 60 required)" : ""}
+                  Characters: {message.length}/100 {message.length < 1 ? "" : ""}
                 </p>
               </>
             )}
