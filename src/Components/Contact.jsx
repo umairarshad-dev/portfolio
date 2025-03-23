@@ -229,14 +229,14 @@ const ContactForm = () => {
               <>
                 <h2 className="text-2xl font-bold mb-6">Your message</h2>
                 <textarea
-                  placeholder="Type your message here ( maximum 100 characters)..."
+                  placeholder="Type your message here..."
                   value={message}
                   onChange={handleMessageChange}
                   className="w-full p-4 bg-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                   rows="4"
                 />
                 <p className="mt-2 text-sm text-gray-500">
-                  Characters: {message.length}/100 {message.length < 1 ? "" : ""}
+                  Characters: {message.length}/1000 {message.length < 1 ? "" : ""}
                 </p>
               </>
             )}
