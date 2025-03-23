@@ -30,12 +30,11 @@ const Skills = () => {
     skillsData.forEach((_, index) => {
       setTimeout(() => {
         setVisibleItems(prev => [...prev, index]);
-      }, index * 150); // Stagger animation timing
+      }, index * 150);  
     });
   };
 
-  // Set up scroll animation with Intersection Observer
-  useEffect(() => {
+   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -59,8 +58,7 @@ const Skills = () => {
     };
   }, []);
 
-  // Add scroll parallax effect
-  useEffect(() => {
+   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
       
@@ -72,8 +70,7 @@ const Skills = () => {
         const scrollProgress = (windowHeight - containerTop) / (windowHeight + containerRef.current.offsetHeight);
         
         elements.forEach((el, index) => {
-          // Create a slight parallax effect based on index and scroll position
-          const offsetY = (index % 3 - 1) * scrollProgress * 15;
+           const offsetY = (index % 3 - 1) * scrollProgress * 15;
           const offsetX = ((index % 5) - 2) * scrollProgress * 8;
           const rotate = ((index % 4) - 2) * scrollProgress * 5;
           
@@ -87,7 +84,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
+    <div  id="skill" ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12 text-white animate-fade-in">
         Skill Highlights
       </h2>

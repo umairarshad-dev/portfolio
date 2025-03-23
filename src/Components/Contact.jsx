@@ -29,8 +29,7 @@ const ContactForm = () => {
   const handleNext = () => {
     setError('');
     
-    // Validate current step before proceeding
-    if (step === 1) {
+     if (step === 1) {
       if (!validateName(name)) {
         toast.error('Name must contain only letters (no digits or special characters)');
         return;
@@ -80,8 +79,7 @@ const ContactForm = () => {
     return false;
   };
 
-  // Handle input changes with validation
-  const handleNameChange = (e) => {
+   const handleNameChange = (e) => {
     const value = e.target.value;
     setName(value);
     setError('');
@@ -95,8 +93,7 @@ const ContactForm = () => {
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
-    // Only allow digits
-    if (value === '' || /^\d+$/.test(value)) {
+     if (value === '' || /^\d+$/.test(value)) {
       setPhone(value);
       setError('');
     }
@@ -109,7 +106,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white p-4 flex flex-col items-center pb-8">
+    <div id="contact" className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white p-4 flex flex-col items-center pb-8">
       <ToastContainer
         position="top-right"
         autoClose={4000}

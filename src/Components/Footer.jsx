@@ -15,8 +15,7 @@ const Footer = () => {
         const footerTop = footer.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        // Show the arrow when the footer is in view
-        if (footerTop < windowHeight) {
+         if (footerTop < windowHeight) {
           setShowArrow(true);
         } else {
           setShowArrow(false);
@@ -36,7 +35,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-gray-400 py-6 flex flex-col items-center justify-center pb-4 relative">
+    <footer  className="text-gray-400 py-6 flex flex-col items-center justify-center pb-4 relative">
       <p className="text-sm">&copy; 2025 Muhammad Umair Arshad. All rights reserved.</p>
 
       <div className="flex gap-6 mt-6 text-white">

@@ -8,28 +8,22 @@ const CreativeWork = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // When section enters viewport
-        if (entry.isIntersecting) {
+         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Once triggered, we don't need to observe anymore
-          observer.unobserve(entry.target);
+           observer.unobserve(entry.target);
         }
       },
       {
-        // Trigger when at least 20% of the element is visible
-        threshold: 0.2,
-        // Add some rootMargin to trigger slightly before the element is in view
-        rootMargin: '0px 0px -50px 0px'
+         threshold: 0.2,
+         rootMargin: '0px 0px -50px 0px'
       }
     );
     
-    // Start observing the section
-    if (sectionRef.current) {
+     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
     
-    // Clean up
-    return () => {
+     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
@@ -44,7 +38,7 @@ const CreativeWork = () => {
       color: "bg-blue-500",
       borderColor: "border-blue-500",
       animation: "transition-all duration-700 transform translate-x-0 opacity-100",
-      initial: "-translate-x-full opacity-0", // From left
+      initial: "-translate-x-full opacity-0",  
     },
     {
       title: "Creative Design",
@@ -53,7 +47,7 @@ const CreativeWork = () => {
       color: "bg-purple-500",
       borderColor: "border-purple-500",
       animation: "transition-all duration-700 transform translate-x-0 opacity-100",
-      initial: "translate-x-full opacity-0", // From right
+      initial: "translate-x-full opacity-0",  
     },
     {
       title: "Animations",
@@ -62,7 +56,7 @@ const CreativeWork = () => {
       color: "bg-green-500",
       borderColor: "border-green-500",
       animation: "transition-all duration-700 transform translate-y-0 opacity-100",
-      initial: "-translate-y-full opacity-0", // From top
+      initial: "-translate-y-full opacity-0", 
     },
     {
       title: "Responsive",
@@ -71,12 +65,13 @@ const CreativeWork = () => {
       color: "bg-yellow-500",
       borderColor: "border-yellow-500",
       animation: "transition-all duration-700 transform translate-y-0 opacity-100",
-      initial: "translate-y-full opacity-0", // From bottom
+      initial: "translate-y-full opacity-0", 
     },
   ];
 
   return (
     <section 
+    id="creative-work"
       ref={sectionRef}
       className="relative bg-[#0f172a] text-white py-16 px-4 sm:px-6 text-center min-h-screen overflow-hidden border-b-4 border-[#2d3748]"
     >

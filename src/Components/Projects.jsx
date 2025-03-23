@@ -27,7 +27,7 @@ const projects = [
 
 const FeaturedProjects = () => {
   return (
-    <div className="bg-[#0D1117] text-white py-16 px-6 gap-6">
+    <div  id="projects" className="bg-[#0D1117] text-white py-16 px-6 gap-6">
       <div className="text-center">
         <h2 className="text-4xl font-bold">Featured Projects</h2>
         <p className="text-gray-400 mt-2">

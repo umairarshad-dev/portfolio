@@ -44,7 +44,7 @@ export default function Nav() {
                 {isCharging ? <BatteryCharging size={22} className="text-green-400" /> : <Battery size={22} />}
                 <span className="text-sm">{batteryLevel}%</span>
               </div>
-              <Search size={22} className="hidden md:block" />
+              {/* <Search size={22} className="hidden md:block" /> */}
               <span>{formatTime(time)}</span>
               <span>{formatDate(time)}</span>
             </div>
@@ -55,8 +55,8 @@ export default function Nav() {
             
           <div className={`w-full md:w-auto hidden md:flex flex-col md:flex-row items-center justify-center gap-12 mt-2 md:mt-0 transition-all duration-300`}>
             <a href="#home" className="hover:text-purple-400">Home</a>
-            <a href="#experience" className="hover:text-purple-400">My Journey</a>
             <a href="#experience" className="hover:text-purple-400">Experience</a>
+            <a href="#skill" className="hover:text-purple-400">Skills</a>
             <a href="#projects" className="hover:text-purple-400">Projects</a>
             <a href="#contact" className="hover:text-purple-400">Contact</a>
           </div>

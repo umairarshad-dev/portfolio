@@ -9,7 +9,7 @@ import { MdOutlinePhone } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+    <section  id="home" className="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
 
       <div className="w-full sm:w-full lg:w-1/2 flex flex-col justify-center items-center">
       <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
