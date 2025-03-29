@@ -6,7 +6,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const Footer = () => {
   const [showArrow, setShowArrow] = useState(false);
-  const resumeUrl = "https://drive.google.com/drive/folders/1sq9akoT3VSWGnAIO2BrfwGluVbvgonaJ?usp=sharing";
+  const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
 
   useEffect(() => {
     const handleScroll = () => {
