@@ -17,16 +17,16 @@ const experiences = [
     link: "https://urbanloop.tech/",
     date: "2023 - 2024",
     description: " Built multiple projects, including portfolio websites, real estate applications, classified ads platforms, and navigation-based systems. Practiced problem-solving through coding challenges, open-source contributions, and freelancing projects.",
-    tags: ["Algorithms", "Web Development", "Software Engineering" , "React", "Next.js", "Freelancing", "Open-Source Contribution"],
+    tags: ["Algorithms", "Web Development", "Software Engineering" , "React", "Next.js", "Open-Source Contribution"],
   },
   
   {
-    title: "Software Engineering",
+    title: "Future Journey",
   
     link: "#",
     date: "2025",
     description:"focusing on problem-solving, object-oriented programming, and database management. Developed a strong analytical mindset and a passion for continuous learning. This experience shaped my approach to writing clean, efficient code and exploring new technologies like React, Next.js, and AI-driven solutions.",
-    tags: ["Problem Solving", "OOP", "Databases", "Continuous Learning", "Modern Web Technologies"],
+    tags: ["Problem Solving", "Continuous Learning", "Modern Web Technologies" , "Freelancing", "Open-Source Contribution"],
   },
   
 ];
