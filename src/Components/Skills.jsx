@@ -59,8 +59,8 @@ const Skills = () => {
   }, []);
 
   return (
-    <div id="skill" ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white animate-fade-in">
+    <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a]">
+      <h2 className="text-4xl font-bold text-center text-white animate-fade-in pb-8">
         Skill Highlights
       </h2>
       
@@ -68,7 +68,7 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <div
             key={index}
-            className={`skill-item flex flex-col items-center justify-center p-4 transition-all duration-700 
+            className={`skill-item flex flex-col items-center justify-center p-4 transition-all duration-700 w-full
                       hover:scale-110 hover:rotate-3 hover:shadow-lg
                       ${visibleItems.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
           >

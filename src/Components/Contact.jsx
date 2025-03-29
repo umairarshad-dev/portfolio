@@ -121,7 +121,7 @@ const ContactForm = () => {
         pauseOnHover
       />
       <div className="w-full max-w-6xl mt-8">
-        <h1 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-4">
+        <h1 className="text-5xl font-bold text-center bg-gradient-to-b from-[#0f1524] to-[#1e293b] text-white bg-clip-text mb-4">
           Let's Connect
         </h1>
         <p className="text-center text-gray-400 text-xl mb-12">

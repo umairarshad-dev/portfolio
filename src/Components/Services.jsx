@@ -43,7 +43,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div id="services" className="flex flex-col items-center bg-gray-800 text-white px-4 py-12">
+    <div id="services" className="flex flex-col items-center bg-gray-900 text-white px-4 py-12">
       <h3 className="text-4xl font-bold mb-4 text-center">Services</h3>
       <p className="text-xl text-gray-300 mb-12 text-center max-w-2xl">
         Explore our professional web solutions designed to help you succeed in the digital world.

@@ -33,7 +33,7 @@ const experiences = [
 
 const Timeline = () => {
   return (
-    <div  id="experience" className="flex flex-col items-center bg-gray-800 text-white py-10 px-4">
+    <div  id="experience" className="flex flex-col items-center bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white py-10 px-4">
       <h3 className="text-4xl font-bold mb-6 text-center">My Journey</h3>
       <h1 className="text-xl text-gray-400 mb-6 text-center">Learning and Work Experience</h1>
 
