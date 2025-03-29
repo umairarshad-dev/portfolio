@@ -1,5 +1,7 @@
 import React from "react";
 import comerzio from "./comerzio.png";
+import urbanloop from "./urbanloop.png";
+
 
 const projects = [
   {
@@ -9,13 +11,14 @@ const projects = [
     link: "https://comerzio.fly.dev/",
     image: comerzio,
   },
-  // {
-  //   title: "Comerzio",
-  //   description: "A classified platform to buy and sell unused items effortlessly.",
-  //   tech: ["Remix", "Tailwind", "TypeScript"],
-  //   link: "https://comerzio.fly.dev/",
-  //   image: comerzio,
-  // },
+  {
+    "title": "Urban Loop Tech",
+    "description": "A digital agency specializing in modern web solutions and development.",
+    "tech": ["TypeScript", "Javascript", "Tailwind"],
+    "link": "https://urbanloop.tech/",
+    "image": urbanloop, 
+  }
+  
   // {
   //   title: "Comerzio",
   //   description: "A classified platform to buy and sell unused items effortlessly.",
@@ -39,7 +42,7 @@ const FeaturedProjects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative bg-[#161B22] rounded-xl overflow-hidden shadow-lg h-[450px]"
+            className="relative bg-[#161B22] rounded-xl overflow-hidden shadow-lg h-[500px]"
           >
              <img
               src={project.image}
