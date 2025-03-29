@@ -34,7 +34,7 @@ const Skills = () => {
     });
   };
 
-   useEffect(() => {
+  useEffect(() => {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -58,33 +58,8 @@ const Skills = () => {
     };
   }, []);
 
-   useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      
-      const elements = containerRef.current.querySelectorAll('.skill-item');
-      const containerTop = containerRef.current.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      
-      if (containerTop < windowHeight && containerTop > -containerRef.current.offsetHeight) {
-        const scrollProgress = (windowHeight - containerTop) / (windowHeight + containerRef.current.offsetHeight);
-        
-        elements.forEach((el, index) => {
-           const offsetY = (index % 3 - 1) * scrollProgress * 15;
-          const offsetX = ((index % 5) - 2) * scrollProgress * 8;
-          const rotate = ((index % 4) - 2) * scrollProgress * 5;
-          
-          el.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${rotate}deg)`;
-        });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div  id="skill" ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
+    <div id="skill" ref={containerRef} className="skills-container my-16 px-4 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12 text-white animate-fade-in">
         Skill Highlights
       </h2>
@@ -94,7 +69,7 @@ const Skills = () => {
           <div
             key={index}
             className={`skill-item flex flex-col items-center justify-center p-4 transition-all duration-700 
-                      hover:scale-110 hover:rotate-3 hover:shadow-lg hover:shadow-${skill.name.toLowerCase()}/20
+                      hover:scale-110 hover:rotate-3 hover:shadow-lg
                       ${visibleItems.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
           >
             <div
