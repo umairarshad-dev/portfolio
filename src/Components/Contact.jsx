@@ -153,7 +153,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-gray-400">Phone</p>
-                  <p>0334-7775040</p>
+                  <p>0334-XXXXXXX</p>
                 </div>
               </div>
               
