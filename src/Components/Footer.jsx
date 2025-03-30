@@ -4,6 +4,10 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaArrowUp } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+
+
 
 
 const Footer = () => {
@@ -42,22 +46,6 @@ const Footer = () => {
 
       <div className="flex gap-6 mt-6 text-white">
         <a
-          href="https://wa.me/923347775040"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
-          aria-label="Contact me on WhatsApp"
-        >
-          <FaWhatsapp size={25} />
-        </a>
-        <a
-          href="tel:03347775040"
-          className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
-          aria-label="Call me"
-        >
-          <MdOutlinePhone size={25} />
-        </a>
-        <a
           href="https://www.linkedin.com/in/umairarshad-dev/"
           target="_blank"
           rel="noopener noreferrer"
@@ -65,6 +53,25 @@ const Footer = () => {
           aria-label="Connect with me on LinkedIn"
         >
           <FaLinkedinIn size={25} />
+        </a>
+        <a
+          href="https://x.com/umairarshad_dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+          aria-label="Connect with me on LinkedIn"
+        >
+          <FaXTwitter size={25} />
+        </a>
+
+        <a
+          href="https://github.com/umairarshad-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-3 rounded-full bg-white/10 hover:bg-gray-400 transition duration-300"
+          aria-label="Connect with me on LinkedIn"
+        >
+          < BsGithub size={25} />
         </a>
         <a
           href="mailto:umairarshad6697@gmail.com"
