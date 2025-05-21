@@ -47,12 +47,12 @@ const Skills = () => {
   }, []);
 
   return (
-    <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a] max-w-8xl mx-auto">
+    <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a] max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center text-white animate-fade-in pb-8">
         Skill Highlights
       </h2>
 
-      <div className=" container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
         {skillsData.map((skill, index) => (
           <div
             key={index}

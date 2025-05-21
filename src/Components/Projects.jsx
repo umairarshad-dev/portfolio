@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-center gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
