@@ -125,7 +125,7 @@ const CreativeWork = () => {
           Bringing ideas to life through innovative design and seamless interactions
         </p>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mt-12 sm:mt-16 max-w-5xl mx-auto">
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mt-12 sm:mt-16 max-w-8xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index} 

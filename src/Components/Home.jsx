@@ -12,28 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white border-b-4 border-[#2d3748] overflow-hidden">
-      {/* Animated background dots for subtle effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full w-1 h-1"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.7 + 0.1,
-              animation: `twinkle ${Math.random() * 2 + 1}s ease-in-out infinite alternate`,
-            }}
-          />
-        ))}
-      </div>
-      <style jsx>{`
-        @keyframes twinkle {
-          0% { opacity: 0.2; }
-          100% { opacity: 0.8; }
-        }
-      `}</style>
+    <section id="home" className="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
 
       <div className="w-full sm:w-full lg:w-1/2 flex flex-col justify-center items-center">
         <h1 className=" container  text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
@@ -43,7 +22,7 @@ const HeroSection = () => {
             I'm {""}
             <Typewriter
               words={["M Umair Arshad"]}
-              loop={false} 
+              loop={false}
               cursor
               cursorStyle="_"
               typeSpeed={150}
