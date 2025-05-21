@@ -12,17 +12,38 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+    <section id="home" className="relative flex flex-col lg:flex-row items-center justify-center text-center py-16 px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white border-b-4 border-[#2d3748] overflow-hidden">
+      {/* Animated background dots for subtle effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        {Array.from({ length: 40 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-white rounded-full w-1 h-1"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              opacity: Math.random() * 0.7 + 0.1,
+              animation: `twinkle ${Math.random() * 2 + 1}s ease-in-out infinite alternate`,
+            }}
+          />
+        ))}
+      </div>
+      <style jsx>{`
+        @keyframes twinkle {
+          0% { opacity: 0.2; }
+          100% { opacity: 0.8; }
+        }
+      `}</style>
 
       <div className="w-full sm:w-full lg:w-1/2 flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
+        <h1 className=" container  text-4xl md:text-5xl font-bold leading-tight mt-20 pb-4">
           Hello!
           <div className="py-2"></div>
           <span className="text-blue-400 whitespace-nowrap">
             I'm {""}
             <Typewriter
               words={["M Umair Arshad"]}
-              loop={false}
+              loop={false} 
               cursor
               cursorStyle="_"
               typeSpeed={150}
@@ -40,7 +61,7 @@ const HeroSection = () => {
         </div>
 
         <p className="max-w-xl text-gray-300 text-lg leading-relaxed text-center">
-          I am a dedicated Frontend Developer specializing in React, Remix, and TypeScript. Passionate about crafting scalable, high-performance web applications with a strong emphasis on user experience, accessibility, and responsiveness. I thrive on solving complex challenges and building innovative digital solutions.</p>
+          I'm a results-driven Frontend Engineer skilled in React.js, Next.js, Remix, and TypeScript. I specialize in developing high-performance, SEO-friendly, and responsive web applications that prioritize user experience, accessibility, and modern design principles. With a passion for clean code and scalable architecture, I thrive on transforming complex requirements into innovative, production-ready digital solutions.          </p>
 
         <div className="flex gap-6 mt-8">
           <a

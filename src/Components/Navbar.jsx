@@ -36,7 +36,7 @@ export default function Nav() {
   return (
     <>
       <nav className={`w-full p-4 fixed top-0 bg-opacity-10 backdrop-blur-lg shadow-lg z-50 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"}`}>
-        <div className="max-w-7xl mx-auto flex justify-between items-center flex-wrap pt-2 pb-2">
+        <div className="container mx-auto flex justify-between items-center flex-wrap pt-2 pb-2">
           <div className="w-full md:w-auto flex justify-between items-center mb-2 md:mb-0">
             <div className="flex items-center gap-4">
               <Wifi size={22} />
