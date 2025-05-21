@@ -37,7 +37,7 @@ const Timeline = () => {
       <h3 className="text-4xl font-bold mb-6 text-center">My Journey</h3>
       <h1 className="text-xl text-gray-400 mb-6 text-center">Learning and Work Experience</h1>
 
-      <div className="relative w-full max-w-4xl">
+      <div className="relative  max-w-6xl">
          <motion.div
           className="absolute w-1 h-full left-1/2 transform -translate-x-1/2 bg-gradient-to-b from-purple-500 to-indigo-500 hidden lg:block"
           initial={{ height: 0 }}

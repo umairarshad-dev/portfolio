@@ -47,7 +47,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a] max-w-7xl mx-auto">
+    <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a] max-w-8xl mx-auto">
       <h2 className="text-4xl font-bold text-center text-white animate-fade-in pb-8">
         Skill Highlights
       </h2>
