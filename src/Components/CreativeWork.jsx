@@ -33,7 +33,7 @@ const CreativeWork = () => {
   const services = [
     {
       title: "Interactive UI",
-      description: "Creating engaging user interfaces with smooth animations and transitions",
+      description: "Crafting dynamic user interfaces with smooth transitions and engaging user interactions.",
       icon: <FaCode size={22} />,
       color: "bg-blue-500",
       borderColor: "border-blue-500",
@@ -42,7 +42,7 @@ const CreativeWork = () => {
     },
     {
       title: "Creative Design",
-      description: "Implementing unique and creative design solutions with modern aesthetics",
+      description: "Applying modern design principles to deliver visually striking and user-friendly layouts.",
       icon: <FaPalette size={22} />,
       color: "bg-purple-500",
       borderColor: "border-purple-500",
@@ -51,7 +51,7 @@ const CreativeWork = () => {
     },
     {
       title: "Animations",
-      description: "Bringing websites to life with captivating animations and effects",
+      description: "Enhancing user experience with meaningful animations, micro-interactions, and motion effects.",
       icon: <FaMagic size={22} />,
       color: "bg-green-500",
       borderColor: "border-green-500",
@@ -60,7 +60,7 @@ const CreativeWork = () => {
     },
     {
       title: "Responsive",
-      description: "Building fully responsive websites that work seamlessly across all devices",
+      description: "Developing fully responsive interfaces that perform flawlessly across desktops, tablets, and mobile devices.",
       icon: <FaLaptop size={22} />,
       color: "bg-yellow-500",
       borderColor: "border-yellow-500",

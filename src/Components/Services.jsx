@@ -6,7 +6,7 @@ const ServicesSection = () => {
     {
       id: 1,
       title: "Web Development",
-      description: "Expert web development services to bring your ideas to life. From conceptualization to deployment, I craft robust, scalable, and secure web applications that meet your business needs.",
+      description: "Professional web development services that turn ideas into fully functional web applications. I build scalable, secure, and high-performing solutions from planning to launch.",
       tags: [ ],
       icon: (
         <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
@@ -17,7 +17,7 @@ const ServicesSection = () => {
     {
       id: 2,
       title: "Web Design",
-      description: "Creative web designing solutions to captivate your audience. I design visually stunning, user-friendly, and engaging websites that reflect your brand identity and drive growth.",
+      description: "Creative and user-focused designs that reflect your brand identity. I design clean, modern, and engaging websites that leave a lasting impression.",
       tags: [ ],
       icon: (
         <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
@@ -30,7 +30,7 @@ const ServicesSection = () => {
     {
       id: 3,
       title: "Responsive Web Design",
-      description: "Responsive web design services to ensure seamless user experiences across all devices. Mobile, tablet, and desktop-friendly designs that adapt to any screen size.",
+      description: "Responsive design that adapts to all screen sizes. I ensure your website works perfectly on mobile, tablet, and desktop for a consistent user experience.",
       tags: [ ],
       icon: (
         <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">

@@ -28,8 +28,8 @@ const ContactForm = () => {
 
   const handleNext = () => {
     setError('');
-    
-     if (step === 1) {
+
+    if (step === 1) {
       if (!validateName(name)) {
         toast.error('Name must contain only letters (no digits or special characters)');
         return;
@@ -45,7 +45,7 @@ const ContactForm = () => {
         return;
       }
     }
-    
+
     if (step < 4) setStep(step + 1);
   };
 
@@ -56,12 +56,12 @@ const ContactForm = () => {
 
   const handleSubmit = () => {
     setError('');
-    
+
     if (!validateMessage(message)) {
       toast.error('Message must be at least 60 characters');
       return;
     }
-    
+
     console.log({ name, email, phone, message });
     toast.success('Form submitted successfully!');
     setName('');
@@ -124,14 +124,15 @@ const ContactForm = () => {
         <h1 className="text-5xl font-bold text-center bg-gradient-to-b from-[#0f1524] to-[#1e293b] text-white bg-clip-text mb-4">
           Let's Connect
         </h1>
-        <p className="text-center text-gray-400 text-xl mb-12">
-          Choose your preferred way to reach out
+        <p className="text-center text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
+          Feel free to reach out through your preferred channel. I'm open to opportunities, collaborations, or a quick chat.
+
         </p>
 
         <div className="flex flex-col md:flex-row gap-8 w-full">
           <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
             <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
-            
+
             <div className="space-y-8">
               <div className="flex items-center gap-4 group">
                 <div className="bg-blue-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
@@ -144,7 +145,7 @@ const ContactForm = () => {
                   <p>umairarshad6697@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 group">
                 <div className="bg-green-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,7 +157,7 @@ const ContactForm = () => {
                   <p>0334-XXXXXXX</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 group">
                 <div className="bg-red-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -169,7 +170,7 @@ const ContactForm = () => {
                   <p>Islamabad, Pakistan</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 group">
                 <div className="bg-purple-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -250,13 +251,12 @@ const ContactForm = () => {
                   Back
                 </button>
               )}
-              
+
               {step < 4 ? (
                 <button
                   onClick={handleNext}
-                  className={`px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl transition duration-300 ${
-                    isNextDisabled() ? "opacity-50 cursor-not-allowed" : ""
-                  } ${step === 1 ? "ml-auto" : ""}`}
+                  className={`px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl transition duration-300 ${isNextDisabled() ? "opacity-50 cursor-not-allowed" : ""
+                    } ${step === 1 ? "ml-auto" : ""}`}
                   disabled={isNextDisabled()}
                 >
                   Next
@@ -264,9 +264,8 @@ const ContactForm = () => {
               ) : (
                 <button
                   onClick={handleSubmit}
-                  className={`px-6 py-3 bg-green-600 hover:bg-green-500 rounded-xl transition duration-300 flex items-center gap-2 ${
-                    isNextDisabled() ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
+                  className={`px-6 py-3 bg-green-600 hover:bg-green-500 rounded-xl transition duration-300 flex items-center gap-2 ${isNextDisabled() ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
                   disabled={isNextDisabled()}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -276,14 +275,13 @@ const ContactForm = () => {
                 </button>
               )}
             </div>
-            
+
             <div className="flex justify-center mt-8 gap-2">
               {[1, 2, 3, 4].map((num) => (
-                <div 
+                <div
                   key={num}
-                  className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                    step === num ? "w-8 bg-blue-500" : "bg-gray-600"
-                  }`}
+                  className={`h-2 w-2 rounded-full transition-all duration-300 ${step === num ? "w-8 bg-blue-500" : "bg-gray-600"
+                    }`}
                 />
               ))}
             </div>

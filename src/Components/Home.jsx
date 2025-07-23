@@ -40,7 +40,8 @@ const HeroSection = () => {
         </div>
 
         <p className="max-w-xl text-gray-300 text-lg leading-relaxed text-center">
-          I'm a results-driven Frontend Engineer skilled in React.js, Next.js, Remix, and TypeScript. I specialize in developing high-performance, SEO-friendly, and responsive web applications that prioritize user experience, accessibility, and modern design principles. With a passion for clean code and scalable architecture, I thrive on transforming complex requirements into innovative, production-ready digital solutions.          </p>
+          A Frontend Engineer with hands-on experience in React.js, Next.js, Remix, and TypeScript. I focus on building fast, responsive, and SEO-optimized web applications with clean code and modern UI. I'm passionate about creating accessible, scalable solutions that deliver real value and elevate the user experience.
+        </p>
 
         <div className="flex gap-6 mt-8">
           <a

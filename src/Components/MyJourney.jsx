@@ -7,8 +7,8 @@ const experiences = [
     company: "Codecademy",
     link: "https://www.codecademy.com/",
     date: "Completed in 2024",
-    description: "Successfully completed a comprehensive Frontend Development and AI course, mastering technologies like React, JavaScript, and modern web development practices.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "AI", "+6 more"],
+    description: "Completed a hands-on Frontend Development and AI course. Built projects using React and JavaScript while learning modern web practices and basic AI concepts.",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Git", "Responsive Design", "AI Basics"],
   },
   
   {
@@ -16,19 +16,18 @@ const experiences = [
     company: "Urban Loop Tech",
     link: "https://urbanloop.tech/",
     date: "2023 - 2024",
-    description: " Built multiple projects, including portfolio websites, real estate applications, classified ads platforms, and navigation-based systems. Practiced problem-solving through coding challenges, open-source contributions, and freelancing projects.",
-    tags: ["Algorithms", "Web Development", "Software Engineering" , "React", "Next.js", "Open-Source Contribution"],
+    description: "Worked on a variety of client and in-house projects including portfolio websites, real estate applications, classified ad platforms, and navigation-based systems. Practiced coding consistently through challenges and freelance tasks.",
+    tags: ["React", "Next.js", "Tailwind CSS", "JavaScript", "API Integration", "GitHub", "UI Development"],
   },
   
   {
     title: "Future Journey",
-  
+    company: "",
     link: "#",
     date: "2025",
-    description:"focusing on problem-solving, object-oriented programming, and database management. Developed a strong analytical mindset and a passion for continuous learning. This experience shaped my approach to writing clean, efficient code and exploring new technologies like React, Next.js, and AI-driven solutions.",
-    tags: ["Problem Solving", "Continuous Learning", "Modern Web Technologies" , "Freelancing", "Open-Source Contribution"],
+    description: "Currently focused on improving problem-solving, building reusable UI components, and learning advanced patterns in React and Next.js. Continuing to grow through consistent practice, project work, and staying updated with new frontend technologies.",
+    tags: ["Problem Solving", "React Patterns", "Next.js", "Clean UI", "Continuous Learning"],
   },
-  
 ];
 
 const Timeline = () => {
