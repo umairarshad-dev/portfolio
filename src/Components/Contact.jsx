@@ -178,8 +178,8 @@ const ContactForm = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-400">Cal.com</p>
-                  <a href="https://cal.com/umairarshad.dev" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Schedule a meeting with Me</a>
+                  <p className="text-gray-400">Book a Time</p>
+                  <a href="https://cal.com/umairarshad.dev" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Let’s connect — schedule a meeting with me</a>
                 </div>
               </div>
             </div>
