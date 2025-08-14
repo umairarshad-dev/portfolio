@@ -108,14 +108,14 @@ const Footer = () => {
         </a>
       </div>
 
-      <a
+      {/* <a
         href={resumeUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 px-6 py-2 bg-white/10 text-white rounded-full hover:bg-gray-500 transition duration-300"
       >
         View Resume
-      </a>
+      </a> */}
 
       {showArrow && (
         <button
