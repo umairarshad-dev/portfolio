@@ -1,53 +1,130 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A minimal, SEO-optimized personal website built with React, JavaScript, and Tailwind CSS.
+
+## Features
+
+✨ Minimal, clean layout
+🌙 Dark mode support
+📝 Project showcase with detailed case studies
+🔍 SEO-optimized with Open Graph and meta tags
+📱 Fully responsive design
+⚡ Fast performance with modern build tools
+
+## Tech Stack
+
+- **Framework**: React 18
+- **Styling**: Tailwind CSS v3
+- **Build Tool**: Create React App
+- **Package Manager**: pnpm
+- **CSS Processing**: PostCSS
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 14.0.0
+- pnpm (recommended) or npm
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm start
+
+# Build for production
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+## Development
+
+```bash
+# Start development server
+pnpm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## Production Build
+
+```bash
+# Build for production
+pnpm build
+
+# The optimized build output will be in the /build directory
+```
+
+## Pages & Sections
+
+- **Home** - Landing page with introduction
+- **MyJourney** - Personal background and experience
+- **Skills** - Technical skills and expertise
+- **Services** - Services offered
+- **Projects** - Showcase of completed projects
+- **CreativeWork** - Portfolio of creative work
+- **Contact** - Contact information and form
+
+## Configuration Files
+
+- `tailwind.config.js` - Tailwind CSS configuration
+- `postcss.config.js` - PostCSS configuration
+- `package.json` - Project dependencies and scripts
+
+## SEO Features
+
+- Meta tags for Open Graph and Twitter Cards
+- Semantic HTML structure
+- Optimized images with alt text
+- Responsive design for mobile SEO
+- Performance optimization
+
+## Deployment
+
+### Build for Production
+
+```bash
+pnpm build
+```
+
+The production-ready files will be in the `/build` directory.
+
+### Deploy to Hosting
+
+1. Build the project: `pnpm build`
+2. Upload the `/build` folder to your hosting service
+3. Configure your server to serve `index.html` for all routes
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `pnpm start` - Run development server
+- `pnpm build` - Create production build
+- `pnpm test` - Run tests
+- `pnpm eject` - Eject from Create React App (irreversible)
 
-### `npm start`
+## Browser Support
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## License
 
-### `npm test`
+Open source - feel free to use as a template for your own portfolio!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `npm run build`
+Created by Umair Arshad
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For questions or feedback, please contact through the contact page or open an issue on GitHub.
 
 ### Analyzing the Bundle Size
 
