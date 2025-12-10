@@ -23,25 +23,37 @@ const ContactForm = () => {
   };
 
   const validateMessage = (value) => {
-    return value.trim().length >= 0;
+    return value.trim().length >= 10;
   };
 
   const handleNext = () => {
     setError('');
 
     if (step === 1) {
+      if (!name.trim()) {
+        toast.error('Name is required');
+        return;
+      }
       if (!validateName(name)) {
         toast.error('Name must contain only letters (no digits or special characters)');
         return;
       }
     } else if (step === 2) {
+      if (!email.trim()) {
+        toast.error('Email is required');
+        return;
+      }
       if (!validateEmail(email)) {
         toast.error('Email must follow the format example@gmail.com');
         return;
       }
     } else if (step === 3) {
+      if (!phone.trim()) {
+        toast.error('Phone number is required');
+        return;
+      }
       if (!validatePhone(phone)) {
-        toast.error('Enter a valid phone number to proceed.');
+        toast.error('Enter a valid 11-digit phone number');
         return;
       }
     }
@@ -54,21 +66,26 @@ const ContactForm = () => {
     if (step > 1) setStep(step - 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setError('');
 
     if (!validateMessage(message)) {
-      toast.error('Message must be at least 60 characters');
+      toast.error('Message must be at least 10 characters');
       return;
     }
 
-    console.log({ name, email, phone, message });
-    toast.success('Form submitted successfully!');
-    setName('');
-    setEmail('');
-    setPhone('');
-    setMessage('');
-    setStep(1);
+    try {
+      console.log({ name, email, phone, message });
+      toast.success('Form submitted successfully!');
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+      setStep(1);
+    } catch (err) {
+      console.error('Submission error:', err);
+      toast.error('Error submitting form. Please try again.');
+    }
   };
 
   const isNextDisabled = () => {

@@ -12,7 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const [showArrow, setShowArrow] = useState(false);
-  const resumeUrl = "file:///C:/Users/user/Downloads/Muhammad%20Umair%20Arshad%20(1).pdf";
+  const resumeUrl = process.env.REACT_APP_RESUME_URL || "https://your-resume-link.com/resume.pdf";
 
   useEffect(() => {
     const handleScroll = () => {
