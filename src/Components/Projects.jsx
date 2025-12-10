@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import comerzio from "./comerzio.png";
-import urbanloop from "./urbanloop.png";
-import ecommerce from "./e-commerce.png";
-import musicApp from "./music-app.png";
-import nutritionist from "./nutrition .png";
-import portfolioDesign from "./portfolio design.png";
+import comerzio from "../assets/images/comerzio.png";
+import urbanloop from "../assets/images/urbanloop.png";
+import ecommerce from "../assets/images/e-commerce.png";
+import musicApp from "../assets/images/music-app.png";
+import nutritionist from "../assets/images/nutrition .png";
+import portfolioDesign from "../assets/images/portfolio design.png";
 
 export const projects = [
   {

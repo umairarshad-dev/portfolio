@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
-import profilePic from "./profile.png";
+import profilePic from "../assets/images/profile.png";
 import { MdOutlinePhone } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
