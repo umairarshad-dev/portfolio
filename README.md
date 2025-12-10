@@ -16,7 +16,7 @@ A minimal, SEO-optimized personal website built with React, JavaScript, and Tail
 - **Framework**: React 18
 - **Styling**: Tailwind CSS v3
 - **Build Tool**: Create React App
-- **Package Manager**: pnpm
+- **Package Manager**: npm
 - **CSS Processing**: PostCSS
 
 ## Getting Started
@@ -24,29 +24,29 @@ A minimal, SEO-optimized personal website built with React, JavaScript, and Tail
 ### Prerequisites
 
 - Node.js >= 14.0.0
-- pnpm (recommended) or npm
+- npm
 
 ### Installation
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Run development server
-pnpm start
+npm start
 
 # Build for production
-pnpm build
+npm build
 
 # Run tests
-pnpm test
+npm test
 ```
 
 ## Development
 
 ```bash
 # Start development server
-pnpm start
+npm start
 ```
 
 The app will open at [http://localhost:3000](http://localhost:3000)
@@ -55,7 +55,7 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 
 ```bash
 # Build for production
-pnpm build
+npm build
 
 # The optimized build output will be in the /build directory
 ```
@@ -89,23 +89,23 @@ pnpm build
 ### Build for Production
 
 ```bash
-pnpm build
+npm build
 ```
 
 The production-ready files will be in the `/build` directory.
 
 ### Deploy to Hosting
 
-1. Build the project: `pnpm build`
+1. Build the project: `npm build`
 2. Upload the `/build` folder to your hosting service
 3. Configure your server to serve `index.html` for all routes
 
 ## Available Scripts
 
-- `pnpm start` - Run development server
-- `pnpm build` - Create production build
-- `pnpm test` - Run tests
-- `pnpm eject` - Eject from Create React App (irreversible)
+- `npm start` - Run development server
+- `npm build` - Create production build
+- `npm test` - Run tests
+- `npm eject` - Eject from Create React App (irreversible)
 
 ## Browser Support
 
@@ -122,26 +122,3 @@ Open source - feel free to use as a template for your own portfolio!
 
 Created by Umair Arshad
 
----
-
-For questions or feedback, please contact through the contact page or open an issue on GitHub.
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
