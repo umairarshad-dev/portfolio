@@ -35,7 +35,7 @@ const HeroSection = () => {
           <img
             src={profilePic}
             alt="Muhammad Umair Arshad"
-            className="w-42 h-42 md:w-48 md:h-48 rounded-3xl border-4 border-gray-600 shadow-2xl object-cover transform rotate-2"
+            className="w-42 h-42 md:w-48 md:h-48 rounded-3xl border-4 border-gray-600 shadow-2xl object-cover"
           />
         </div>
 
@@ -112,7 +112,7 @@ const HeroSection = () => {
         <img
           src={profilePic}
           alt="Muhammad Umair Arshad"
-          className="w-80 h-80 rounded-3xl border-4 border-gray-600 shadow-2xl object-cover transform rotate-3"
+          className="w-80 h-80 rounded-3xl border-4 border-gray-600 shadow-2xl object-cover"
         />
       </div>
     </section>
