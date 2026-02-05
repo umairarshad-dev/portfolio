@@ -100,11 +100,11 @@ const CreativeWork = () => {
         }
         
         @keyframes dance {
-          0% { transform: translateY(0px) rotate(0deg); }
-          25% { transform: translateY(-3px) rotate(1deg); }
-          50% { transform: translateY(0px) rotate(0deg); }
-          75% { transform: translateY(3px) rotate(-1deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
+          0% { transform: translateY(0px); }
+          25% { transform: translateY(-3px); }
+          50% { transform: translateY(0px); }
+          75% { transform: translateY(3px); }
+          100% { transform: translateY(0px); }
         }
         
         .animate-dance {
