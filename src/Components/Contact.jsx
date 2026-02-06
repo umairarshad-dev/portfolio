@@ -8,8 +8,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [phone, setPhone] = useState('');
-  const [error, setError] = useState('');
-
+  
   const validateName = (value) => {
     return /^[A-Za-z\s]+$/.test(value);
   };
@@ -27,7 +26,6 @@ const ContactForm = () => {
   };
 
   const handleNext = () => {
-    setError('');
 
     if (step === 1) {
       if (!name.trim()) {
@@ -62,13 +60,10 @@ const ContactForm = () => {
   };
 
   const handleBack = () => {
-    setError('');
     if (step > 1) setStep(step - 1);
   };
 
   const handleSubmit = async () => {
-    setError('');
-
     if (!validateMessage(message)) {
       toast.error('Message must be at least 10 characters');
       return;
@@ -100,13 +95,11 @@ const ContactForm = () => {
   const handleNameChange = (e) => {
     const value = e.target.value;
     setName(value);
-    setError('');
   };
 
   const handleEmailChange = (e) => {
     const value = e.target.value;
     setEmail(value);
-    setError('');
   };
 
   const handlePhoneChange = (e) => {
@@ -114,14 +107,12 @@ const ContactForm = () => {
     // Only allow digits
     if (value === '' || /^\d+$/.test(value)) {
       setPhone(value);
-      setError('');
     }
   };
 
   const handleMessageChange = (e) => {
     const value = e.target.value;
     setMessage(value);
-    setError('');
   };
 
   return (

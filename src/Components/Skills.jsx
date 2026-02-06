@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaJs, FaBootstrap, FaSass } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiTypescript, SiNextdotjs, SiRemix, SiPostman, SiFigma, SiVercel } from 'react-icons/si';
@@ -8,7 +8,7 @@ const Skills = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const containerRef = useRef(null);
 
-  const skillsData = [
+  const skillsData = useMemo(() => [
     { name: 'HTML', icon: <FaHtml5 />, color: '#E34F26' },
     { name: 'CSS', icon: <FaCss3Alt />, color: '#1572B6' },
     { name: 'Sass', icon: <FaSass />, color: '#CD6799' },
@@ -23,9 +23,9 @@ const Skills = () => {
     { name: 'Figma', icon: <SiFigma />, color: '#ffffff' },
     { name: 'Postman', icon: <SiPostman />, color: '#FF6C37' },
     { name: 'Vercel', icon: <SiVercel />, color: '#ffffff' },
-  ];
+  ], []);
 
-  const animateItems = () => {
+  const animateItems = useCallback(() => {
     if (hasAnimated) return;
     setHasAnimated(true);
     skillsData.forEach((_, index) => {
@@ -33,7 +33,7 @@ const Skills = () => {
         setVisibleItems(prev => [...prev, index]);
       }, index * 100);
     });
-  };
+  }, [hasAnimated, skillsData]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,7 +44,7 @@ const Skills = () => {
     );
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [animateItems]);
 
   return (
     <div id="skill" ref={containerRef} className="p-20 bg-[#0f172a] max-w-7xl mx-auto">

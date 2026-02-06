@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaArrowUp } from "react-icons/fa";
-import { MdOutlinePhone } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -12,7 +10,6 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const [showArrow, setShowArrow] = useState(false);
-  const resumeUrl = process.env.REACT_APP_RESUME_URL || "https://your-resume-link.com/resume.pdf";
 
   useEffect(() => {
     const handleScroll = () => {
